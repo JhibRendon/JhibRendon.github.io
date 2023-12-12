@@ -1,0 +1,205 @@
+body {
+  background-image: url('DD.jpg');
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  backdrop-filter: blur(10px);
+  position: relative;
+  width: 100%;
+} 
+
+header {
+  background-color: rgb(0, 0, 0);
+  padding: 1px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.navigation {
+  display: flex;
+  justify-content: end;
+  list-style: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: clamp(1.125rem, 0.6563rem + 1.5vw, 1.5rem);
+  letter-spacing: 3px;
+  transition: 0.6s;
+  margin: 10px;
+  width: 100%;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: rgb(212, 220, 221);
+  border-radius: 1rem;
+  padding: 5px 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  align-items: center;
+  display: flex;
+}
+#BLOGPAGE{
+  color: aqua;
+}
+.navigation a:hover {
+  color: #ff0000;
+}
+.navigation a {
+  transition: transform 0.3s ease-in-out;
+}
+.navigation a:hover {
+  transform: translateY(-3px); 
+}
+
+.content {
+  text-align: center;
+  margin-top: 50px;
+  bottom: 100px;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 3px;
+  margin: 1%;
+}
+
+h2 span {
+  color: aqua;
+}
+
+
+.lesson {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.lesson-item {
+  width: 500px;
+  height: max-content;
+  margin: 30px;
+  padding: 30px;
+  border: 5px solid black;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.lesson-item img {
+  width: 100%;
+  max-height: max-content;
+  object-fit: cover;
+  border-radius: 5px; 
+}
+
+.lesson-item h2 {
+  margin-top: 10px;
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+}
+
+.lesson-item p {
+  font-size: 20px; 
+  color: rgb(245, 240, 240); 
+  margin-top: 15px;
+}
+@keyframes fadeInAnimation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes borderGlowAnimation {
+  0% {
+    box-shadow: 0 0 10px aqua;
+  }
+  50% {
+    box-shadow: 0 0 20px aqua, 0 0 30px #00ffff;
+  }
+  100% {
+    box-shadow: 0 0 10px aqua;
+  }
+}
+
+.lesson-item:hover {
+  animation: borderGlowAnimation 1.5s ease-in-out infinite;
+}
+.back-container {
+  display: flex;
+  margin: 50px;
+  justify-content: center;
+}
+.back-container a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: white;
+  color: rgb(2, 2, 2);
+  text-decoration: none;
+  border-radius: 100px;
+  font-size: 20px;
+  transition: background-color 0.5s ease;
+}
+.back-container a:hover {
+  background-color: #080808;
+}
+/* FOOTER */
+.container {
+  flex: 1;
+}
+
+footer {
+  background-color: transparent;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  .logo {
+    font-size: 20px;
+  }
+
+  .navigation {
+    margin: 10px 0;
+    justify-content: center;
+  }
+
+  .navigation a {
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+
+  .content {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lesson-item {
+    width: 50%;
+    margin: 10px auto;
+  }
+}
