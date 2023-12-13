@@ -19,11 +19,52 @@ header {
   justify-content: space-between;
 }
     
+/* Define the initial styles for the logo */
 .logo {
-  font-size: 24px;
+  font-size: 36px;
+  text-transform: uppercase;
   font-weight: bold;
-  color: white;
+  position: relative;
+  overflow: hidden;
 }
+
+/* Define animation for the first span */
+.logo span:first-child {
+  display: inline-block;
+  transform-origin: 50% 50%;
+  animation: scaleLetter 1.5s ease-in-out infinite alternate;
+  /* Alternate direction on each iteration */
+}
+
+/* Define animation for the second span */
+.logo span:last-child {
+  display: inline-block;
+  transform-origin: 50% 50%;
+  animation: rotateLetter 1.5s ease-in-out infinite alternate;
+  /* Alternate direction on each iteration */
+}
+
+/* Keyframes for scaling the first span */
+@keyframes scaleLetter {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Keyframes for rotating the second span */
+@keyframes rotateLetter {
+  0% {
+    transform: rotateY(-180deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+
     
 .navigation {
   display: flex;
@@ -49,6 +90,7 @@ header {
 }
 #FLEXPAGE{
   color: aqua;
+  text-decoration: underline;
 }   
 .navigation a:hover {
   color: #ff0000;
@@ -134,17 +176,18 @@ h2 span {
 .back-container a:hover {
   background-color: #080808;
 }
-/* FOOTER */
-.container {
-  flex: 1;
-}
-
 footer {
   background-color: transparent;
-  color: white;
-  font-size: 20px;
-  display: flex;
-  justify-content: center;
+  padding: 20px 0;
+  text-align: center;
+}
+.footer-container {
+  font-family: Arial, sans-serif;
+}
+.footer-container p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
 }
 @media screen and (max-width: 768px) {
   header {
